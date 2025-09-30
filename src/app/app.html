@@ -15,17 +15,30 @@
     <button type="button" class="btn btn-outline-secondary">Moda</button>
   </div>
 
-  <!-- if per componente di tutti i dati -->
-  <app-lista-dati></app-lista-dati>
+  @if (selectedSection == "tutti") {
+  <section>
+    <app-lista-dati></app-lista-dati>
+  </section>
+  }
 
-  <!-- if per componente di viaggi -->
-  <app-lista-viaggi></app-lista-viaggi>
+  @if (selectedSection == "viaggi") {
+  <section>
+    <app-lista-viaggi></app-lista-viaggi>
+  </section>
+  }
 
-  <!-- if per componente di cucina -->
-  <app-lista-cucina></app-lista-cucina>
+  @if (selectedSection == "cucina") {
+  <section>
+    <app-lista-cucina></app-lista-cucina>
+  </section>
+  }
 
-  <!-- if per componente di moda -->
-  <app-lista-moda></app-lista-moda>
+  @if (selectedSection == "moda") {
+  <section>
+    <app-lista-moda></app-lista-moda>
+  </section>
+  }
+
 
 </div>
 

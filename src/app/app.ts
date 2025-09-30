@@ -7,6 +7,8 @@ import { ListaCucina } from "./components/lista-cucina/lista-cucina";
 import { ListaModa } from "./components/lista-moda/lista-moda";
 import { CommonModule } from '@angular/common';
 
+type Section = "tutti" | "viaggi" | "cucina" | "moda" | null
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, ListaPreferiti, ListaDati, ListaViaggi, ListaCucina, ListaModa, CommonModule],
@@ -15,4 +17,10 @@ import { CommonModule } from '@angular/common';
 })
 export class App {
   protected readonly title = signal('terzo-progetto');
+
+  selectedSection: Section = "tutti";
+
+  select(section: Section) {
+    this.selectedSection = section;
+  }
 }
