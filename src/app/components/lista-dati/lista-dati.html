@@ -1,8 +1,7 @@
 <div class="card mt-4">
     @for (d of postDati; track $index) {
-    <app-dati-item></app-dati-item>
+    <app-dati-item [dati]="d"></app-dati-item>
     }
-
 </div>
 <!-- icona per metterlo tra i preferiti: <i class="bi bi-star"></i> -->
 <!-- icona quando è selezionato tra i preferiti: <i class="bi bi-star-fill"></i> -->

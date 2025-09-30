@@ -1,6 +1,7 @@
-import { Component, OnInit, output } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DatiItem } from "../dati-item/dati-item";
 import { Post } from '../../models/blog';
+import { DatiService } from '../../services/dati-service';
 
 @Component({
   selector: 'app-lista-dati',
@@ -10,9 +11,12 @@ import { Post } from '../../models/blog';
 })
 export class ListaDati implements OnInit {
 
+
   postDati: Post[] = [];
 
+  datiServer: DatiService = inject(DatiService);
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.postDati = this.datiServer.getDati();
   }
 }

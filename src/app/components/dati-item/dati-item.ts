@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Post } from '../../models/blog';
 
 @Component({
   selector: 'app-dati-item',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './dati-item.css'
 })
 export class DatiItem {
-
+  @Input()
+  dati?: Post;
 }
