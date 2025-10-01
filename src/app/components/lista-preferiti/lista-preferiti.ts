@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PreferitiService } from '../../services/preferiti-service';
 
 @Component({
   selector: 'app-lista-preferiti',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './lista-preferiti.css'
 })
 export class ListaPreferiti {
-
+  preferitiService: PreferitiService = inject(PreferitiService);
 }
