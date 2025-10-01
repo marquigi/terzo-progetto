@@ -1,7 +1,11 @@
-<div class="card mt-4">
+<div class="container mt-4">
+
     @for (d of postDati; track $index) {
-    <app-dati-item [dati]="d"></app-dati-item>
+    <div class="card mb-4">
+        <app-dati-item [dati]="d"></app-dati-item>
+    </div>
     }
+
 </div>
 <!-- icona per metterlo tra i preferiti: <i class="bi bi-star"></i> -->
 <!-- icona quando è selezionato tra i preferiti: <i class="bi bi-star-fill"></i> -->
