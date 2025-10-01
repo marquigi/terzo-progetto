@@ -17,5 +17,9 @@ export class PreferitiService {
     this.datiNeiPreferiti = [];
   }
 
+  getPreferiti(): Post[] {
+    return this.datiNeiPreferiti;
+  }
+
   // Aggiugere un metodo per rimuovere un solo dato preferiti
 }

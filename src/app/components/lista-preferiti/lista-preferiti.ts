@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { PreferitiService } from '../../services/preferiti-service';
 import { CommonModule } from '@angular/common';
+import { Post } from '../../models/blog';
 
 @Component({
   selector: 'app-lista-preferiti',
@@ -8,6 +9,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './lista-preferiti.html',
   styleUrl: './lista-preferiti.css'
 })
-export class ListaPreferiti {
+export class ListaPreferiti implements OnInit {
+
   preferitiService: PreferitiService = inject(PreferitiService);
+
+  preferiti: Post[] = [];
+
+  ngOnInit(): void {
+    this.preferiti = this.preferitiService.getPreferiti();
+  }
 }
