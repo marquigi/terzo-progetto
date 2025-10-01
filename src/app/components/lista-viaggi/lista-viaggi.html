@@ -1,2 +1,6 @@
-<p>lista-viaggi works!</p>
+@for (p of postViaggi; track $index) {
+<div class="card mb-4">
+    <app-viaggi-item></app-viaggi-item>
+</div>
+}
 <!-- icona per metterlo tra i preferiti: <i class="bi bi-star"></i> -->

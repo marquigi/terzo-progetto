@@ -9,10 +9,22 @@
   <h2>Posts</h2>
 
   <div class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-outline-secondary">Tutti</button>
-    <button type="button" class="btn btn-outline-secondary">Viaggi</button>
-    <button type="button" class="btn btn-outline-secondary">Cucina</button>
-    <button type="button" class="btn btn-outline-secondary">Moda</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="select('tutti')" [ngClass]="{ 
+      'btn-primary': selectedSection === 'tutti', 
+      'btn-outline-secondary': selectedSection !== 'tutti' 
+    }">Tutti</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="select('viaggi')" [ngClass]="{ 
+      'btn-primary': selectedSection === 'viaggi', 
+      'btn-outline-secondary': selectedSection !== 'viaggi' 
+    }">Viaggi</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="select('cucina')" [ngClass]="{ 
+      'btn-primary': selectedSection === 'cucina', 
+      'btn-outline-secondary': selectedSection !== 'cucina' 
+    }">Cucina</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="select('moda')" [ngClass]="{ 
+      'btn-primary': selectedSection === 'moda', 
+      'btn-outline-secondary': selectedSection !== 'moda' 
+    }">Moda</button>
   </div>
 
   <div class="container mt-4">
