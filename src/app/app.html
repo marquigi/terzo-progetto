@@ -15,29 +15,34 @@
     <button type="button" class="btn btn-outline-secondary">Moda</button>
   </div>
 
-  @if (selectedSection == "tutti") {
-  <section>
-    <app-lista-dati></app-lista-dati>
-  </section>
-  }
+  <div class="container mt-4">
 
-  @if (selectedSection == "viaggi") {
-  <section>
-    <app-lista-viaggi></app-lista-viaggi>
-  </section>
-  }
+    @if (selectedSection == "tutti") {
+    <section>
+      <app-lista-dati></app-lista-dati>
+    </section>
+    }
 
-  @if (selectedSection == "cucina") {
-  <section>
-    <app-lista-cucina></app-lista-cucina>
-  </section>
-  }
+    @if (selectedSection == "viaggi") {
+    <section>
+      <app-lista-viaggi></app-lista-viaggi>
+    </section>
+    }
 
-  @if (selectedSection == "moda") {
-  <section>
-    <app-lista-moda></app-lista-moda>
-  </section>
-  }
+    @if (selectedSection == "cucina") {
+    <section>
+      <app-lista-cucina></app-lista-cucina>
+    </section>
+    }
+
+    @if (selectedSection == "moda") {
+    <section>
+      <app-lista-moda></app-lista-moda>
+    </section>
+    }
+
+
+  </div>
 
 
 </div>
