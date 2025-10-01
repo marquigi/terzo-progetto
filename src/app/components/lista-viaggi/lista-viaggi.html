@@ -1,6 +1,7 @@
-@for (p of postViaggi; track $index) {
+@for (v of postDati; track $index) {
 <div class="card mb-4">
-    <app-viaggi-item></app-viaggi-item>
+    <app-viaggi-item [viaggi]="v"></app-viaggi-item>
 </div>
 }
+<!-- {{ postViaggi| json }} -->
 <!-- icona per metterlo tra i preferiti: <i class="bi bi-star"></i> -->

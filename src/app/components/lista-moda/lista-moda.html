@@ -1,2 +1,6 @@
-<p>lista-moda works!</p>
+@for (f of postDati; track $index) {
+<div class="card mb-4">
+    <app-moda-item [moda]="f"></app-moda-item>
+</div>
+}
 <!-- icona per metterlo tra i preferiti: <i class="bi bi-star"></i> -->

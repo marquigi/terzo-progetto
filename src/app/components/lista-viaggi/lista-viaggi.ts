@@ -1,23 +1,23 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Post } from '../../models/blog';
+import { Post, PostCategory } from '../../models/blog';
 import { DatiService } from '../../services/dati-service';
 import { ViaggiItem } from "../viaggi-item/viaggi-item";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-lista-viaggi',
-  imports: [ViaggiItem],
+  imports: [ViaggiItem, CommonModule],
   templateUrl: './lista-viaggi.html',
   styleUrl: './lista-viaggi.css'
 })
 export class ListaViaggi implements OnInit {
 
-
-  postViaggi: Post[] = [];
+  postDati: Post[] = [];
 
   datiServer: DatiService = inject(DatiService);
 
   ngOnInit(): void {
-    this.postViaggi = this.datiServer.getDati();
+    this.postDati = this.datiServer.getPostCategory('travel');
   }
 
 }
