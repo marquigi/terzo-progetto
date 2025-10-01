@@ -11,7 +11,6 @@ import { DatiService } from '../../services/dati-service';
 })
 export class ListaDati implements OnInit {
 
-
   postDati: Post[] = [];
 
   datiServer: DatiService = inject(DatiService);
