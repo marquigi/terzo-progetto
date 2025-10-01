@@ -1,7 +1,10 @@
 <div class="card">
     <div class="card-body">
-        <p>Titolo o nome dato {{ preferitiService.aggiungiPreferiti.length }}<i class="bi bi-x-square-fill"></i></p>
+        <p>Titolo o nome dato {{ this.preferitiService | json }}<i class="bi bi-x-square-fill"></i>
+        </p>
     </div>
+
 </div>
 
+<button class="btn btn-danger mt-2">Svuota</button>
 <!-- https://getbootstrap.com/docs/5.3/components/card/#about -->
