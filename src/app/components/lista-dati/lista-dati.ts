@@ -17,6 +17,6 @@ export class ListaDati implements OnInit {
   datiServer: DatiService = inject(DatiService);
 
   ngOnInit(): void {
-    // this.postDati = this.datiServer.getDati();
+    this.postDati = this.datiServer.getDati();
   }
 }
