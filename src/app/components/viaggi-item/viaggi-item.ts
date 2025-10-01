@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Post } from '../../models/blog';
 import { CommonModule } from '@angular/common';
+import { PreferitiService } from '../../services/preferiti-service';
 
 @Component({
   selector: 'app-viaggi-item',
@@ -11,4 +12,10 @@ import { CommonModule } from '@angular/common';
 export class ViaggiItem {
   @Input()
   viaggi?: Post;
+
+  preferitiService: PreferitiService = inject(PreferitiService);
+
+  aggiungiPreferiti() {
+    this.preferitiService.aggiungiPreferiti(this.viaggi!);
+  }
 }
