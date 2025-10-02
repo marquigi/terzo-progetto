@@ -5,9 +5,9 @@
     <h5 class="card-title">{{ dati.category }}</h5>
     <p class="card-text">Data di pubblicazione: {{ dati.date | date:"dd/MM/yyyy HH:mm" }}</p>
     <p class="card-text">{{ dati.body }}</p>
+
     <button class="btn btn-primary" (click)="aggiungiPreferiti()"><i class="bi bi-star"></i> Aggiungi a
         preferiti</button>
-    <!-- Aggiungere un evento click, togliergli il testo e colore icona -->
 </div>
 
 }

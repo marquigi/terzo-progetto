@@ -15,7 +15,10 @@ export class DatiItem {
 
   preferitiService: PreferitiService = inject(PreferitiService);
 
+  aggiunto = false;
+
   aggiungiPreferiti() {
     this.preferitiService.aggiungiPreferiti(this.dati!);
   }
+
 }
