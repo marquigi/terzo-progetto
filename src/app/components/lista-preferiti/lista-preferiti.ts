@@ -18,4 +18,14 @@ export class ListaPreferiti implements OnInit {
   ngOnInit(): void {
     this.preferiti = this.preferitiService.getPreferiti();
   }
+
+  onSvuota() {
+    this.preferitiService.svuotaPreferiti();
+    this.preferiti = this.preferitiService.getPreferiti();
+  }
+
+  onRimuovi(id: number) {
+    this.preferitiService.rimuoviPreferito(id);
+    this.preferiti = this.preferitiService.getPreferiti(); // aggiorna la lista
+  }
 }

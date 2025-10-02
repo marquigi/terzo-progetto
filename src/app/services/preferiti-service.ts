@@ -22,4 +22,7 @@ export class PreferitiService {
   }
 
   // Aggiugere un metodo per rimuovere un solo dato preferiti
+  rimuoviPreferito(id: number) {
+    this.datiNeiPreferiti = this.datiNeiPreferiti.filter(p => p.id !== id);
+  }
 }
