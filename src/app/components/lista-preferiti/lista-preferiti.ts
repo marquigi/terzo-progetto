@@ -26,6 +26,7 @@ export class ListaPreferiti implements OnInit {
 
   onRimuovi(id: number) {
     this.preferitiService.rimuoviPreferito(id);
-    this.preferiti = this.preferitiService.getPreferiti(); // aggiorna la lista
+    this.preferiti = this.preferitiService.getPreferiti();
+
   }
 }

@@ -5,9 +5,16 @@
     <h5 class="card-title">{{ viaggi.category }}</h5>
     <p class="card-text">Data di pubblicazione: {{ viaggi.date | date:"dd/MM/yyyy HH:mm" }}</p>
     <p class="card-text">{{ viaggi.body }}</p>
-    <button class="btn btn-primary" (click)="aggiungiPreferiti()"><i class="bi bi-star"></i> Aggiungi a
-        preferiti</button>
+
+    @if (!aggiunto) {
+    <button class="btn btn-primary" (click)="aggiungiPreferiti()">
+        <i class="bi bi-star"></i> Aggiungi a preferiti
+    </button>
+    }@else {
+    <button class="btn btn-secondary" disabled>
+        <i class="bi bi-star-fill"></i> Già nei preferiti
+    </button>
+    }
 
 </div>
 }
-<!-- Aggiungere un evento click, togliergli il testo e colore icona -->

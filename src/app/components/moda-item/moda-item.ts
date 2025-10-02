@@ -15,7 +15,10 @@ export class ModaItem {
 
   preferitiService: PreferitiService = inject(PreferitiService);
 
+  aggiunto = false;
+
   aggiungiPreferiti() {
     this.preferitiService.aggiungiPreferiti(this.moda!);
+    this.aggiunto = true;
   }
 }

@@ -5,8 +5,16 @@
     <h5 class="card-title">{{ cucina.category }}</h5>
     <p class="card-text">Data di pubblicazione: {{ cucina.date | date:"dd/MM/yyyy HH:mm" }}</p>
     <p class="card-text">{{ cucina.body }}</p>
-    <button class="btn btn-primary" (click)="aggiungiPreferiti()"><i class="bi bi-star"></i> Aggiungi a
-        preferiti</button>
+
+    @if (!aggiunto) {
+    <button class="btn btn-primary" (click)="aggiungiPreferiti()">
+        <i class="bi bi-star"></i> Aggiungi a preferiti
+    </button>
+    }@else {
+    <button class="btn btn-secondary" disabled>
+        <i class="bi bi-star-fill"></i> Già nei preferiti
+    </button>
+    }
 
 </div>
 }

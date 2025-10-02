@@ -19,6 +19,7 @@ export class DatiItem {
 
   aggiungiPreferiti() {
     this.preferitiService.aggiungiPreferiti(this.dati!);
+    this.aggiunto = true;
   }
 
 }
