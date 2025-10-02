@@ -24,4 +24,8 @@ export class PreferitiService {
   rimuoviPreferito(id: number) {
     this.datiNeiPreferiti = this.datiNeiPreferiti.filter(p => p.id !== id);
   }
+
+  controlloPreferiti(id: number): boolean {
+    return this.datiNeiPreferiti.some(p => p.id === id);
+  }
 }

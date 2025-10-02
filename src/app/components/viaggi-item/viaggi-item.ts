@@ -15,11 +15,11 @@ export class ViaggiItem {
 
   preferitiService: PreferitiService = inject(PreferitiService);
 
-  aggiunto = false;
-
   aggiungiPreferiti() {
     this.preferitiService.aggiungiPreferiti(this.viaggi!);
-    this.aggiunto = true;
   }
 
+  aggiuntoP(): boolean {
+    return this.preferitiService.controlloPreferiti(this.viaggi!.id);
+  }
 }

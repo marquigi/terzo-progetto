@@ -15,10 +15,11 @@ export class CucinaItem {
 
   preferitiService: PreferitiService = inject(PreferitiService);
 
-  aggiunto = false;
-
   aggiungiPreferiti() {
     this.preferitiService.aggiungiPreferiti(this.cucina!);
-    this.aggiunto = true;
+  }
+
+  aggiuntoP(): boolean {
+    return this.preferitiService.controlloPreferiti(this.cucina!.id);
   }
 }
